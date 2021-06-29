@@ -65,8 +65,9 @@ function decodeString(str) {
   return (
     <>
       <form className="header" onSubmit={handleSubmit}>
+      <div className="header-title"><p className="title">Trivia Alpha Search</p></div>
       <div className="form-group">
-        <label htmlFor="category">Category</label>
+        <label htmlFor="category">Questions Category</label>
         <select id="category" ref={categoryEl}>
           {categories.map(category => {
             return <option value={category.id} key={category.id}>{category.name}
@@ -76,7 +77,7 @@ function decodeString(str) {
       </div>
       
       <div className="form-group">
-        <label htmlFor="amount">Number Of Questions</label>
+        <label htmlFor="amount">Amount Of Questions</label>
         <input type="number" id="amount" min="1" step="1" defaultValue={0} ref={amountEl} />
       </div>
 
